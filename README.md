@@ -25,6 +25,23 @@
 - Git
 - ...
 
+## Architecture Project
+- Root (Root component)
+  - Common (Root component)
+    - App (Route component)
+    - AppNav (Stateless component)
+  - Components (Root)
+    - Auth (Route)
+      - Login (Stateful)
+      - Register (Stateful)
+      - Auth-form (Stateless)
+    - Contact (Route)
+      - Contacts (Stateful)
+      - Contact-new (Stateful)
+      - Contact-edit (Stateful)
+      - Contact-detail (Stateless)
+      - Contact (Stateless)
+
 ## Gulp Tasks inside gulpfile.js
 - `gulp annotate` - Inject AngularJs dependencies
 - `gulp templates` - Cache for angular html templates
