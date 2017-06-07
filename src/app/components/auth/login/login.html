@@ -1,15 +1,24 @@
-<md-toolbar class="md-theme-indigo">
-  <h1 class="md-toolbar-tools md-display-3">Login</h1>
-</md-toolbar>
+<div  layout="column"
+      layout-align="center center"
+      layout-padding
+      layout-fill>
 
-<auth-form
-  user="$ctrl.user"
-  message="{{ $ctrl.error }}"
-  button="Login"
-  on-submit="$ctrl.loginUser($event)">
-</auth-form>
+      <div flex="50">
+        <md-toolbar class="md-theme-indigo">
+          <h1 class="md-toolbar-tools md-display-3">Login</h1>
+        </md-toolbar>
 
-<md-button class="md-primary"
-           ui-sref="auth.register">
-  Don't have an account? Create one here.
-</md-button>
+        <auth-form
+          user="$ctrl.user"
+          message="{{ $ctrl.error }}"
+          button="Login"
+          on-submit="$ctrl.loginUser($event)">
+        </auth-form>
+
+        <md-button class="md-primary"
+                   ui-sref="auth.register">
+          Don't have an account? Create one here.
+        </md-button>
+      </div>
+
+</div>
