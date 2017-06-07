@@ -1,0 +1,14 @@
+
+<h1 class="md-display-3">Register</h1>
+
+<auth-form
+  user="$ctrl.user"
+  message="{{ $ctrl.error }}"
+  button="Register"
+  on-submit="$ctrl.registerUser($event)">
+</auth-form>
+
+<md-button class="md-primary"
+           ui-sref="auth.login">
+  Already have an account? Login here.
+</md-button>

@@ -1,0 +1,18 @@
+<div  layout="row"
+      layout-align="center center"
+      layout-padding layout-margin layout-fill>
+
+    <div flex="100" flex-gt-xs="70" flex-gt-sm="50" flex-gt-md="30">
+      
+    <md-toolbar class="md-theme-indigo">
+      <h1 class="md-toolbar-tools md-display-3">Edit Contact</h1>
+    </md-toolbar>
+
+    <contact-detail
+      contact="$ctrl.contact"
+      on-delete="$ctrl.deleteContact($event);"
+      on-update="$ctrl.updateContact($event);">
+    </contact-detail>
+  </div>
+
+</div>

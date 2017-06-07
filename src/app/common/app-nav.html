@@ -1,0 +1,38 @@
+<md-toolbar layout="row"
+            layout-align="space-between center"
+            class="md-toolbar-tools"
+            layout-padding
+            layout-margin
+            layout-fill
+            style="min-height: 70px;">
+
+  <div flex="20" flex-gt-sm="50">
+      <h1>Contacts Manager</h1>
+  </div>
+
+  <div flex="20" hide-sm hide-xs>
+      {{ ::$ctrl.user.email }}
+  </div>
+
+  <div flex="20" flex-gt-sm="50">
+    <md-button class="md-fab md-mini"
+               ui-sref="new">
+      <md-icon>person_add</md-icon>
+    </md-button>
+  </div>
+
+  <div flex="20" flex-gt-sm="50">
+    <md-button class="md-fab md-mini"
+               ui-sref="contacts">
+      <md-icon>people</md-icon>
+    </md-button>
+  </div>
+
+  <div flex="20" flex-gt-sm="50">
+    <md-button class="md-accent"
+               ng-click="$ctrl.onLogout();">
+      Logout
+    </md-button>
+  </div>
+
+</md-toolbar>

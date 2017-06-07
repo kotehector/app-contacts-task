@@ -1,0 +1,39 @@
+<form name="authForm" novalidate ng-submit="$ctrl.submitForm();">
+
+  <md-input-container class="md-block">
+    <md-icon md-colors="{color: 'primary-900-0.5'}">email</md-icon>
+    <label>Enter your email</label>
+    <input ng-model="$ctrl.user.email"
+          type="email"
+          name='email'
+          required="required">
+      <div ng-messages="authForm.email.$error">
+        <div ng-message="required">This field is required</div>
+        <div ng-message="email">This filed should be a valid email</div>
+      </div>
+  </md-input-container>
+
+  <md-input-container class="md-icon-float md-block">
+    <md-icon md-colors="{color: 'primary-900-0.5'}"><i class="material-icons">lock_outline</i></md-icon>
+    <label>Enter your password</label>
+    <md-icon>password</md-icon>
+    <input type="password"
+           ng-model="$ctrl.user.password"
+           name="password"
+           minlength="6"
+           required>
+      <div ng-messages="authForm.password.$error">
+        <div ng-message="required">This field is required</div>
+        <div ng-message="minlength">This filed should be at least 6 characters long</div>
+      </div>
+  </md-input-container>
+
+  <md-button class="md-raised" type="submit" ng-disabled="authForm.$invalid">
+      {{ $ctrl.button }}
+  </md-button>
+
+  <div ng-if="$ctrl.message">
+    {{ $ctrl.message }}
+  </div>
+
+</form>

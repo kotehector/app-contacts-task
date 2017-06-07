@@ -1,0 +1,76 @@
+
+
+  <form name="contactDetailForm" novalidate>
+
+      <md-input-container class="md-block">
+        <!-- Use floating placeholder instead of label -->
+        <md-icon md-colors="{color: 'primary-900-0.5'}">people</md-icon>
+        <label>Name</label>
+        <input ng-model="$ctrl.contact.name"
+              type="text"
+              name='name'
+              required="required">
+          <div ng-messages="contactDetailForm.name.$error">
+            <div ng-message="required">This field is required</div>
+            <div ng-message="email">This filed should be a valid email</div>
+          </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <!-- Use floating placeholder instead of label -->
+        <md-icon md-colors="{color: 'primary-900-0.5'}">people</md-icon>
+        <label>Surname</label>
+        <input ng-model="$ctrl.contact.surname"
+              type="text"
+              name='surname'>
+          <div ng-messages="contactDetailForm.surname.$error">
+          </div>
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <!-- Use floating placeholder instead of label -->
+        <md-icon md-colors="{color: 'primary-900-0.5'}">email</md-icon>
+        <label>Email</label>
+        <input ng-model="$ctrl.contact.email"
+              type="email"
+              name='email'
+              required="required">
+          <div ng-messages="contactDetailForm.email.$error">
+            <div ng-message="required">This field is required</div>
+            <div ng-message="email">This filed should be a valid email</div>
+          </div>
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm>
+        <md-icon md-colors="{color: 'primary-900-0.5'}">world</md-icon>
+        <label>Country</label>
+        <md-select ng-model="$ctrl.contact.country">
+          <md-option ng-repeat="country in $ctrl.countries" value="{{ country.code }}">
+            {{ country.name }}
+          </md-option>
+        </md-select>
+      </md-input-container>
+
+      <md-button class="md-raised"
+                  type="submit"
+                  ng-if="$ctrl.isNewContact"
+                  ng-click="$ctrl.saveContact();"
+                  ng-disabled="contactDetailForm.$invalid">
+         SAVE</md-button>
+
+      <md-button class="md-raised"
+                  md-colors="{ color: 'accent-900-0.5'}"
+                  ng-if="!$ctrl.isNewContact"
+                  ng-click="$ctrl.deleteContact();" >
+          DELETE
+      </md-button>
+
+      <md-button class="md-raised"
+                  ng-if="!$ctrl.isNewContact"
+                  md-colors="{color: 'primary-900-0.5'}"
+                  ng-click="$ctrl.updateContact($event);" >
+          UPDATE
+      </md-button>
+
+  </form>
+</div>

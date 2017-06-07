@@ -1,0 +1,15 @@
+<md-toolbar class="md-theme-indigo">
+  <h1 class="md-toolbar-tools md-display-3">Login</h1>
+</md-toolbar>
+
+<auth-form
+  user="$ctrl.user"
+  message="{{ $ctrl.error }}"
+  button="Login"
+  on-submit="$ctrl.loginUser($event)">
+</auth-form>
+
+<md-button class="md-primary"
+           ui-sref="auth.register">
+  Don't have an account? Create one here.
+</md-button>

@@ -1,0 +1,32 @@
+<md-grid-list class="grid-contacts"
+    md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="5"
+    md-row-height-gt-md="1:1" md-row-height="4:3"
+    md-gutter="8px" md-gutter-gt-sm="4px" >
+
+    <md-grid-tile ng-repeat="contact in $ctrl.contacts"
+                  class="wrapper-tile-{{ $index }}"
+                  md-rowspan="1"
+                  md-rowspan-xs="2"
+                  md-colspan="1"
+                  md-colspan-sm="1"
+                  md-colspan-xs="2" >
+
+
+        <img ng-init="$ctrl.getAvatar($index);"  alt="">
+        <contact
+          contact="contact"
+          on-select="$ctrl.goToContact($event)">
+        </contact>
+
+      <md-grid-tile-footer md-colors="{background: 'primary'}">
+        <h3 class="md-display-1">{{ contact.name }}</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+</md-grid-list>
+
+<div class="contacts__empty"
+  ng-if="!$ctrl.contacts.length">
+  <i class="material-icons">face</i>
+  There's no one here...
+</div>

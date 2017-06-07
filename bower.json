@@ -1,0 +1,18 @@
+{
+  "version": "0.0.0",
+  "name": "app-contacts-challenge",
+  "appPath": "src/",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-loading-bar": "^0.9.0",
+    "angular-messages": "^1.6.1",
+    "angular-ui-router": "1.0.0-beta.2",
+    "angular-resource": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "angularfire": "^2.0.2",
+    "firebase": "3.3.0",
+    "material-icons": "^0.1.0",
+    "randomcolor": "^0.5.2",
+    "faker": "^0.0.2"
+  }
+}

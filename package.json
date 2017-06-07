@@ -1,0 +1,48 @@
+{
+  "name": "app-contacts-challenge",
+  "version": "1.0.0",
+  "author": "@kotehector",
+  "description": "Contacts Manager App for JavaScript Challenge",
+  "scripts": {
+    "install": "gulp",
+    "dev": "lite-server",
+    "test": "karma start",
+    "deploy": "firebase deploy"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/",
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-natural-sort": "^0.1.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-wrap": "^0.13.0",
+    "jasmine-core": "^2.4.1",
+    "jshint": "^2.9.4",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-spec-reporter": "0.0.23",
+    "lite-server": "^2.3.0",
+    "main-bower-files": "^2.13.1",
+    "path": "^0.12.7",
+    "stream-series": "^0.1.1",
+    "stylish": "^1.0.0"
+  },
+  "dependencies": {
+    "country-list": "^1.1.0"
+  }
+}
