@@ -17,9 +17,18 @@
 - Angular UiRouter
 - Firebase Backend (BBDD, Hosting)
 - MaterialIcons
-- Gulp 
+- Gulp
 - LittleServer
 - Bower
 - NPM
+- Faker.js
 - Git
 - ...
+
+## Gulp Tasks inside gulpfile.js
+- `gulp annotate` - Inject AngularJs dependencies
+- `gulp templates` - Cache for angular html templates
+- `gulp wrap` - Wrap .js with IIFE
+- `gulp build-css` - Compile Sass files
+- `gulp jshint` - Alert from errors in js files
+- `gulp watch` - Watch files on air tu update browser (not used, used little-server instead)
