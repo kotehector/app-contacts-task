@@ -5,25 +5,23 @@
   //* Service to attack faker.js and get random avatars
   function AvatarService($http) {
 
-    return {
-      getAvatar: function() {
-        var url = 'http://faker.hook.io/:property/';
-        $http.get(url, {
+    var url = 'http://faker.hook.io/:property';
+
+     this.getAvatar =  function() {
+        return $http.get(url, {
           params: {
-            property: 'internet.avatar'
+            property: 'image.avatar'
           }
         }).then(function(response) {
-          console.log(response.data);
           return response.data;
         });
       }
-    }
 
-  }
+   }
 
 
   angular
     .module('components.contact')
-    .factory('AvatarService', AvatarService);
+    .service('AvatarService', AvatarService);
 
 })();
